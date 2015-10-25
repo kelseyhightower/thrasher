@@ -1,0 +1,1 @@
+go build -i -o thrasher -tags netgo --ldflags '-extldflags "-lm -lstdc++ -static"'
