@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    run: thrasher
+  name: thrasher
+spec:
+  replicas: 1
+  selector:
+    run: thrasher
+  template:
+    metadata:
+      labels:
+        run: thrasher
+    spec:
+      containers:
+      - image: gcr.io/google_containers/thrasher
+        name: thrasher
+        resources:
+          requests:
+            cpu: 200m
+      restartPolicy: Always

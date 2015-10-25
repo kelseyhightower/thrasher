@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: thrasher
+  namespace: default
+spec:
+  scaleRef:
+    kind: ReplicationController
+    name: thrasher
+    namespace: default
+  minReplicas: 1
+  maxReplicas: 10
+  cpuUtilization:
+    targetPercentage: 50
