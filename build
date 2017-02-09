@@ -1,1 +1,1 @@
-go build -i -o thrasher -tags netgo --ldflags '-extldflags "-lm -lstdc++ -static"'
+GOOS=linux go build -a --ldflags '-extldflags "-static"' -tags netgo -installsuffix netgo -o thrasher .
