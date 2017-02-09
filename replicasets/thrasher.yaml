@@ -16,6 +16,6 @@ spec:
         name: thrasher
         resources:
           limits:
-            cpu: 16000m
+            cpu: 1000m
           requests:
-            cpu: 4000m
+            cpu: 1000m
